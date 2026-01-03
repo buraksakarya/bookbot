@@ -25,3 +25,30 @@ def get_letter_count(booktext):
             letter_dict[letter] += 1
     
     return letter_dict
+
+def sort_on(items):
+
+    return items["num"]
+
+def modify_dict(letter_dict):
+
+    char_list = []
+
+    for letter in letter_dict:
+        new_dict = {}
+
+        if letter.isalpha():
+            count = letter_dict[letter]
+            new_dict["char"] = letter
+            new_dict["num"] = count
+            char_list.append(new_dict)
+
+    return char_list
+
+def print_sorted_dict(modified_dict):
+    
+    for letter_dict in modified_dict:
+        char = letter_dict["char"]
+        num = letter_dict["num"]
+        print(f"{char}: {num}")
+    return
